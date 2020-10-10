@@ -5,11 +5,16 @@ import ReactDom from 'react-dom';
 // components
 import App from './app.js';
 
-class Main extends React.Component{
+//context
+import CounterProvider from "./contexts/counterContext.js";
 
-    render(){
+class Main extends React.Component {
+
+    render() {
         return (
-            <App />
+            <CounterProvider>
+                <App />
+            </CounterProvider>
         )
     }
 }
